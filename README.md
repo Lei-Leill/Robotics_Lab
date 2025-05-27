@@ -2,14 +2,14 @@
 
 ## Commands
 
-### To run the realsense_ros
+### To run the realsense_camera
 ```
 source /bigdata/thao/.env/bin/activate
 ros2 run realsense2_camera realsense2_camera_node --ros-args -p align_depth.enable:=true
 ```
 
 ### To build the ros2 package
-Make sure to have the realsense2_camer running simultaneously
+Make sure to have the realsense2_camera running simultaneously
 
 Go to the ros2_ws repository
 ```
