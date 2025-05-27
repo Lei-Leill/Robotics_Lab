@@ -1,0 +1,20 @@
+running egg_info
+writing ../../build/rgbd_process/rgbd_process.egg-info/PKG-INFO
+writing dependency_links to ../../build/rgbd_process/rgbd_process.egg-info/dependency_links.txt
+writing entry points to ../../build/rgbd_process/rgbd_process.egg-info/entry_points.txt
+writing requirements to ../../build/rgbd_process/rgbd_process.egg-info/requires.txt
+writing top-level names to ../../build/rgbd_process/rgbd_process.egg-info/top_level.txt
+reading manifest file '../../build/rgbd_process/rgbd_process.egg-info/SOURCES.txt'
+adding license file 'LICENSE'
+writing manifest file '../../build/rgbd_process/rgbd_process.egg-info/SOURCES.txt'
+running build
+running build_py
+running install
+running install_lib
+running install_data
+running install_egg_info
+removing '/homes/tlei/ros2_ws/install/rgbd_process/lib/python3.10/site-packages/rgbd_process-0.0.0-py3.10.egg-info' (and everything under it)
+Copying ../../build/rgbd_process/rgbd_process.egg-info to /homes/tlei/ros2_ws/install/rgbd_process/lib/python3.10/site-packages/rgbd_process-0.0.0-py3.10.egg-info
+running install_scripts
+Installing rgbd_recorder script to /homes/tlei/ros2_ws/install/rgbd_process/lib/rgbd_process
+writing list of installed files to '/homes/tlei/ros2_ws/build/rgbd_process/install.log'
