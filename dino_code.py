@@ -1,4 +1,4 @@
-#Updated for tests
+#Updated for testing
 import requests
 import torch
 from PIL import Image, ImageDraw
