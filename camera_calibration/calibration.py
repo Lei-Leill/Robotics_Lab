@@ -36,7 +36,8 @@ for image in image_files:
 
         img = cv2.drawChessboardCorners(image, Ch_Dim, corners2, ret)
         # cv2.imshow('img', img)
-        # cv2.waitKey(1000)
+        # cv2.waitKey(0)
+    cv2.destroyAllWindows()
 
 ret, mtx, dist_coeff, R_vecs, T_vecs = cv2.calibrateCamera(obj_points_3D, img_points_2D, gray.shape[::-1], None, None)
 print(mtx)
