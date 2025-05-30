@@ -1,3 +1,6 @@
+# https://www.cs.cmu.edu/~16385/s17/Slides/11.1_Camera_matrix.pdf
+# Cool slideshow for conceptual ideas
+
 import cv2 
 import numpy as np
 
@@ -40,14 +43,21 @@ for image in image_files:
     cv2.destroyAllWindows()
 
 ret, mtx, dist_coeff, R_vecs, T_vecs = cv2.calibrateCamera(obj_points_3D, img_points_2D, gray.shape[::-1], None, None)
-print(mtx)
 
 mean_error = 0
 for i in range(len(obj_points_3D)):
     imgpoints2, _ = cv2.projectPoints(obj_points_3D[i], R_vecs[i], T_vecs[i], mtx, dist_coeff)
     error = cv2.norm(img_points_2D[i], imgpoints2, cv2.NORM_L2)/len(imgpoints2)
     mean_error += error
-print( "total error: {}".format(mean_error/len(obj_points_3D)) )
+print("total error: {}".format(mean_error/len(obj_points_3D)))
+
+R, _ = cv2.Rodrigues(R_vecs[0])
+t = T_vecs[0].reshape(3, 1)
+
+Rt = np.hstack((R, t))
+
+P = mtx @ Rt
+print(P)
 
 
 print("calibrated")
