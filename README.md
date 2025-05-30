@@ -15,7 +15,12 @@ python3 dino_3d_location.py --rgb sample_input/rgb.png --depth sample_input/dept
 ### To run the realsense_camera
 ```
 source /bigdata/thao/.env/bin/activate
-ros2 run realsense2_camera realsense2_camera_node --ros-args -p align_depth.enable:=true
+#ros2 run realsense2_camera realsense2_camera_node --ros-args -p align_depth.enable:=true
+
+## Launch separately in two terminals 
+ros2 run realsense2_camera realsense2_camera_node --ros-args -r __node:=left_camera -p serial_no:=_239222303493 -p align_depth.enable:=true
+ros2 run realsense2_camera realsense2_camera_node --ros-args -r __node:=right_camera -p serial_no:=_239222302270 -p align_depth.enable:=true
+
 ```
 
 ### To build the ros2 package

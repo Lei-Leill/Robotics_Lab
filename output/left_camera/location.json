@@ -1,0 +1,26 @@
+[
+    {
+        "label": "a yellow cube",
+        "coords_in_pixel": [
+            930,
+            49
+        ],
+        "coords_in_meter": [
+            0.5978,
+            -0.6417,
+            1.327
+        ]
+    },
+    {
+        "label": "a green cube",
+        "coords_in_pixel": [
+            727,
+            43
+        ],
+        "coords_in_meter": [
+            0.2073,
+            -0.7502,
+            1.522
+        ]
+    }
+]
