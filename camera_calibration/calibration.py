@@ -20,13 +20,14 @@ for i in range(Ch_Dim[0]):
 obj_points_3D = []  # 3d point in real world space
 img_points_2D = []  # 2d points in image plane.
 
-camera = 'left'
+camera = 'right'
 
 import glob
 image_files = glob.glob(rf'camera_calibration\calibration_images\{camera}\*.png')
 
 for image in image_files:
     
+    filename = image
     img = cv2.imread(image)
     image = cv2.cvtColor(img, cv2.COLOR_RGB2BGR)
      
@@ -38,8 +39,11 @@ for image in image_files:
         img_points_2D.append(corners2)
 
         img = cv2.drawChessboardCorners(image, Ch_Dim, corners2, ret)
-        # cv2.imshow('img', img)
-        # cv2.waitKey(0)
+        # if 'prime' in filename:
+        #     output_path = f"camera_calibration/output/prime_right.png"
+        #     cv2.imwrite(output_path, img)
+        cv2.imshow('img', img)
+        cv2.waitKey(0)
     cv2.destroyAllWindows()
 
 ret, mtx, dist_coeff, R_vecs, T_vecs = cv2.calibrateCamera(obj_points_3D, img_points_2D, gray.shape[::-1], None, None)
