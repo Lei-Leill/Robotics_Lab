@@ -42,8 +42,8 @@ for image in image_files:
         # if 'prime' in filename:
         #     output_path = f"camera_calibration/output/prime_right.png"
         #     cv2.imwrite(output_path, img)
-        cv2.imshow('img', img)
-        cv2.waitKey(0)
+        # cv2.imshow('img', img)
+        # cv2.waitKey(0)
     cv2.destroyAllWindows()
 
 ret, mtx, dist_coeff, R_vecs, T_vecs = cv2.calibrateCamera(obj_points_3D, img_points_2D, gray.shape[::-1], None, None)
@@ -55,13 +55,15 @@ for i in range(len(obj_points_3D)):
     mean_error += error
 print("total error: {}".format(mean_error/len(obj_points_3D)))
 
-R, _ = cv2.Rodrigues(R_vecs[0])
-t = T_vecs[0].reshape(3, 1)
+R, _ = cv2.Rodrigues(R_vecs[8])
+t = T_vecs[8].reshape(3, 1)
 
 Rt = np.hstack((R, t))
 
-P = mtx @ Rt
-print(P)
+print(Rt)
+
+# P = mtx @ Rt
+# print(P)
 
 
 print("calibrated")
