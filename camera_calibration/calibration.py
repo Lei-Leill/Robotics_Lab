@@ -6,7 +6,7 @@ import numpy as np
 
 # corners of the square blocks (vertical and horizontal)
 Ch_Dim = (7, 7)
-Sq_size = 80  #milimeters
+Sq_size = 56  #milimeters
 criteria = (cv2.TERM_CRITERIA_EPS + cv2.TERM_CRITERIA_MAX_ITER, 30, 0.001) 
 
 obj_3D = np.zeros((Ch_Dim[0] * Ch_Dim[1], 3), np.float32)
@@ -44,6 +44,7 @@ for image in image_files:
         #     cv2.imwrite(output_path, img)
         # cv2.imshow('img', img)
         # cv2.waitKey(0)
+        # print(filename)
     cv2.destroyAllWindows()
 
 ret, mtx, dist_coeff, R_vecs, T_vecs = cv2.calibrateCamera(obj_points_3D, img_points_2D, gray.shape[::-1], None, None)
@@ -61,6 +62,7 @@ t = T_vecs[8].reshape(3, 1)
 Rt = np.hstack((R, t))
 
 print(Rt)
+# print(mtx)
 
 # P = mtx @ Rt
 # print(P)
