@@ -33,3 +33,8 @@ source intall/setup.bash
 ros2 run rgbd_process recorder
 ```
 Then the depth and rgb images would be saved into rgbd_data
+
+
+
+
+### We realised the could could make the code more efficient using services
