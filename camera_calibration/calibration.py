@@ -6,7 +6,7 @@ import numpy as np
 
 # corners of the square blocks (vertical and horizontal)
 Ch_Dim = (7, 7)
-Sq_size = 56  #milimeters
+Sq_size = 0.056  #now meters
 criteria = (cv2.TERM_CRITERIA_EPS + cv2.TERM_CRITERIA_MAX_ITER, 30, 0.001) 
 
 obj_3D = np.zeros((Ch_Dim[0] * Ch_Dim[1], 3), np.float32)
