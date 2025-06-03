@@ -20,8 +20,8 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'server:server_client.server:main',
-            'client:server_client.client:main'
+            "server = server_client.server:main",
+            "client = server_client.client:main"
         ],
     },
 )
