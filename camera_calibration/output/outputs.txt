@@ -1,0 +1,25 @@
+All data corresponds to the current position of the checkerboard, indexed 17.
+
+Left Camera:
+
+[[-0.09441482  0.99009612 -0.10390147  0.10229601]
+ [ 0.65968152 -0.01594328 -0.75137614 -0.22777912]
+ [-0.74559113 -0.13948292 -0.65164283  0.97675412]]
+
+Note that the right-most column is a translation vector in the frame of the camera's coordinate system.
+The corrected translation vector in frame of the checkerboard's coordinate system is:
+
+[[0.88817915]
+ [0.03132609]
+ [0.47597573]]
+
+
+Right Camera:
+
+[[-0.99950439 -0.01747422  0.02618448  0.08706049]
+ [-0.03119222  0.66191747 -0.74892744 -0.39036483]
+ [-0.00424504 -0.74937302 -0.66213448  1.01596251]]
+
+[[0.0791538 ]
+ [1.02124551]
+ [0.37806924]]

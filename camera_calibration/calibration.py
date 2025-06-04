@@ -20,7 +20,7 @@ for i in range(Ch_Dim[0]):
 obj_points_3D = []  # 3d point in real world space
 img_points_2D = []  # 2d points in image plane.
 
-camera = 'left'
+camera = 'right'
 
 import glob
 image_files = glob.glob(rf'camera_calibration\calibration_images\{camera}\*.png')
@@ -63,9 +63,13 @@ print(image_files[idx])
 R, _ = cv2.Rodrigues(R_vecs[idx])
 t = T_vecs[idx].reshape(3, 1)
 
+adjusted_t = -R.T @ t
+
 Rt = np.hstack((R, t))
 
 print(Rt)
+print(adjusted_t)
+
 # print(mtx)
 
 # P = mtx @ Rt
@@ -80,3 +84,5 @@ print("calibrated")
 #     RotationalV=R_vecs,
 #     TranslationV=T_vecs,
 # )
+
+# print(cv2.solvePnP(obj_points_3D[0], img_points_2D[0], mtx, dist_coeff))
