@@ -12,6 +12,13 @@ def load_model(model_id="IDEA-Research/grounding-dino-tiny"):
     processor = AutoProcessor.from_pretrained(model_id)
     model = AutoModelForZeroShotObjectDetection.from_pretrained(model_id).to(device)
     return processor, model, device
+def camera_to_world(H, point_c):
+    """Transform camera coordinates to world coordinates using homogeneous transformation matrix"""
+    R = H[:3, :3]
+    t = H[:3, 3]
+    return np.dot(R, point_c) + t
+
+
 
 def run_detection(rgb_path, depth_path, label_list, data, output_path):
     # Load images
@@ -63,13 +70,32 @@ def run_detection(rgb_path, depth_path, label_list, data, output_path):
 
         print(f"Detected {label} at (x={u}, y={v})")
         x, y = calculate_x_y(u,v, data['cx'], data['cy'], data['fx'], data['fy'], z_m)
-        print(f"Transformed to meter unit: x={x:.4f}m, y={y:.4f}m, z={depth_str}")
+        print(f"Transformed to meter unit/Camera coordinates: x={x:.4f}m, y={y:.4f}m, z={depth_str}")
+        
+        if z_m is not None and 'transformation_matrix' in data:
+            H = np.array(data['transformation_matrix'])  # Assuming 4x4 matrix in JSON
+            camera_point = np.array([x, y, z_m])
+            world_point = camera_to_world(H, camera_point)
+            coords_world = [round(float(v), 4) for v in world_pt]   # [Xw, Yw, Zw]
+            print(f"World coordinates: x={world_x:.4f}m, y={world_y:.4f}m, z={world_z:.4f}m")
+
 
         # Append to result list
-        detection_results.append({
-            "label": label,
-            "coords_in_meter": [round(x, 4), round(y, 4), round(z_m, 4)],
+            detection_results.append({
+                "label": label,
+                "coords_in_meter": [round(x, 4), round(y, 4), round(z_m, 4)],
+                "coords_in_world": coords_world
+
         })
+
+        else:
+
+            # Store only camera coordinates if no transformation matrix
+            detection_results.append({
+                "label": label,
+                "coords_in_pixel": [u, v],
+                "coords_in_camera": [round(x, 4), round(y, 4), round(z_m, 4)],
+            })
         # Draw and label
         draw.rectangle([x_min, y_min, x_max, y_max], outline="red", width=3)
         draw.text((x_min, y_min - 10), f"{label} ({depth_str})", fill="yellow")
