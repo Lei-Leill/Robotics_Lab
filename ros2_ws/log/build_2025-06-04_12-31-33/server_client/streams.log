@@ -1,0 +1,26 @@
+[1.325s] Invoking command in '/homes/tlei/Robotics_Lab/ros2_ws/src/server_client': PYTHONPATH=/homes/tlei/Robotics_Lab/ros2_ws/build/server_client/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/homes/tlei/Robotics_Lab/ros2_ws/install/server_client/lib/python3.10/site-packages:${PYTHONPATH} VIRTUAL_ENV_PROMPT=(.env) /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/server_client build --build-base /homes/tlei/Robotics_Lab/ros2_ws/build/server_client/build install --record /homes/tlei/Robotics_Lab/ros2_ws/build/server_client/install.log --single-version-externally-managed install_data
+[1.653s] running egg_info
+[1.654s] writing ../../build/server_client/server_client.egg-info/PKG-INFO
+[1.656s] writing dependency_links to ../../build/server_client/server_client.egg-info/dependency_links.txt
+[1.657s] writing entry points to ../../build/server_client/server_client.egg-info/entry_points.txt
+[1.659s] writing requirements to ../../build/server_client/server_client.egg-info/requires.txt
+[1.660s] writing top-level names to ../../build/server_client/server_client.egg-info/top_level.txt
+[1.665s] reading manifest file '../../build/server_client/server_client.egg-info/SOURCES.txt'
+[1.676s] adding license file 'LICENSE'
+[1.677s] writing manifest file '../../build/server_client/server_client.egg-info/SOURCES.txt'
+[1.678s] running build
+[1.678s] running build_py
+[1.679s] copying server_client/server.py -> /homes/tlei/Robotics_Lab/ros2_ws/build/server_client/build/lib/server_client
+[1.682s] running install
+[1.682s] running install_lib
+[1.685s] copying /homes/tlei/Robotics_Lab/ros2_ws/build/server_client/build/lib/server_client/server.py -> /homes/tlei/Robotics_Lab/ros2_ws/install/server_client/lib/python3.10/site-packages/server_client
+[1.689s] byte-compiling /homes/tlei/Robotics_Lab/ros2_ws/install/server_client/lib/python3.10/site-packages/server_client/server.py to server.cpython-310.pyc
+[1.693s] running install_data
+[1.694s] running install_egg_info
+[1.697s] removing '/homes/tlei/Robotics_Lab/ros2_ws/install/server_client/lib/python3.10/site-packages/server_client-0.0.0-py3.10.egg-info' (and everything under it)
+[1.700s] Copying ../../build/server_client/server_client.egg-info to /homes/tlei/Robotics_Lab/ros2_ws/install/server_client/lib/python3.10/site-packages/server_client-0.0.0-py3.10.egg-info
+[1.732s] running install_scripts
+[1.758s] Installing client script to /homes/tlei/Robotics_Lab/ros2_ws/install/server_client/lib/server_client
+[1.794s] Installing server script to /homes/tlei/Robotics_Lab/ros2_ws/install/server_client/lib/server_client
+[1.794s] writing list of installed files to '/homes/tlei/Robotics_Lab/ros2_ws/build/server_client/install.log'
+[1.805s] Invoked command in '/homes/tlei/Robotics_Lab/ros2_ws/src/server_client' returned '0': PYTHONPATH=/homes/tlei/Robotics_Lab/ros2_ws/build/server_client/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/homes/tlei/Robotics_Lab/ros2_ws/install/server_client/lib/python3.10/site-packages:${PYTHONPATH} VIRTUAL_ENV_PROMPT=(.env) /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/server_client build --build-base /homes/tlei/Robotics_Lab/ros2_ws/build/server_client/build install --record /homes/tlei/Robotics_Lab/ros2_ws/build/server_client/install.log --single-version-externally-managed install_data
