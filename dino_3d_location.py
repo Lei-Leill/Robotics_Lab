@@ -68,7 +68,6 @@ def run_detection(rgb_path, depth_path, label_list, data, output_path):
         # Append to result list
         detection_results.append({
             "label": label,
-            "coords_in_pixel": [u, v],  # "left_camera" or "right_camera"
             "coords_in_meter": [round(x, 4), round(y, 4), round(z_m, 4)],
         })
         # Draw and label
