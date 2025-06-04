@@ -20,7 +20,7 @@ for i in range(Ch_Dim[0]):
 obj_points_3D = []  # 3d point in real world space
 img_points_2D = []  # 2d points in image plane.
 
-camera = 'right'
+camera = 'left'
 
 import glob
 image_files = glob.glob(rf'camera_calibration\calibration_images\{camera}\*.png')
@@ -40,12 +40,15 @@ for image in image_files:
 
         img = cv2.drawChessboardCorners(image, Ch_Dim, corners2, ret)
         filename = filepath.split('\\')[-1]
+
         # print(filename)
         output_path = f"camera_calibration/output/{camera}/{filename}"
         # Don't uncomment this
         # cv2.imwrite(output_path, img)
+
         # cv2.imshow('img', img)
         # cv2.waitKey(0)
+
     cv2.destroyAllWindows()
 
 ret, mtx, dist_coeff, R_vecs, T_vecs = cv2.calibrateCamera(obj_points_3D, img_points_2D, gray.shape[::-1], None, None)
@@ -58,6 +61,13 @@ for i in range(len(obj_points_3D)):
 print("total error: {}".format(mean_error/len(obj_points_3D)))
 
 idx = 8
+
+# Drawing axes
+# axes_img_dir = f"camera_calibration/output/{camera}/{camera}_17_Color.png"
+# axes_img = cv2.imread(axes_img_dir)
+# axes_img = cv2.drawFrameAxes(axes_img, mtx, dist_coeff, R_vecs[idx], T_vecs[idx], length=0.2)
+# output_path = f"camera_calibration/output/axes/{camera}_17_Color.png"
+# cv2.imwrite(output_path, axes_img)
 
 print(image_files[idx])
 R, _ = cv2.Rodrigues(R_vecs[idx])
@@ -75,14 +85,4 @@ print(adjusted_t)
 # P = mtx @ Rt
 # print(P)
 
-
 print("calibrated")
-# np.savez(
-#     f"{calib_data_path}/CalibrationMatrix_college_cpt",
-#     Camera_matrix=mtx,
-#     distCoeff=dist_coeff
-#     RotationalV=R_vecs,
-#     TranslationV=T_vecs,
-# )
-
-# print(cv2.solvePnP(obj_points_3D[0], img_points_2D[0], mtx, dist_coeff))
