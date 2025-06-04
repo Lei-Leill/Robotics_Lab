@@ -20,7 +20,7 @@ for i in range(Ch_Dim[0]):
 obj_points_3D = []  # 3d point in real world space
 img_points_2D = []  # 2d points in image plane.
 
-camera = 'right'
+camera = 'left'
 
 import glob
 image_files = glob.glob(rf'camera_calibration\calibration_images\{camera}\*.png')
@@ -56,8 +56,8 @@ for i in range(len(obj_points_3D)):
     mean_error += error
 print("total error: {}".format(mean_error/len(obj_points_3D)))
 
-R, _ = cv2.Rodrigues(R_vecs[8])
-t = T_vecs[8].reshape(3, 1)
+R, _ = cv2.Rodrigues(R_vecs[-1])
+t = T_vecs[-1].reshape(3, 1)
 
 Rt = np.hstack((R, t))
 
