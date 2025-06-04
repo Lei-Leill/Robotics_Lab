@@ -11,12 +11,14 @@ class RGBDDetectionServer(Node):
         super().__init__('rgbd_detection_server')
         self.srv = self.create_service(Trigger, 'detect_object', self.handle_detection_request)
         
-        # Configs - you can change these paths
-        self.ros2_package = 'rgbd_process'    # your ros2 package name with rgbd_recorder node
+        # Configs - change these paths so that they match with your setup!
+        self.ros2_package = 'rgbd_process'    # ros2 package name with rgbd_recorder node
         self.ros2_node = 'recorder'          # the executable node for RGBD capture
-        self.data_folder = '/homes/tlei/Robotic/suscribed_data'  # where images are saved
-        self.label_file = '/homes/tlei/Robotic/labels.txt'       # label file path
-        self.grounding_dino_script = '/homes/tlei/Robotic/Robotics_Lab/dino_3d_location.py'  # path to your detection script
+        self.data_folder = '~/subscribed_data'  # where images are saved
+        script_dir = os.path.dirname(os.path.realpath(__file__))
+        #self.get_logger().info(f"current directory path is {script_dir}")
+        self.label_file = '/homes/tlei/Robotics_Lab/labels.txt'       # label file path
+        self.grounding_dino_script = '/homes/tlei/Robotics_Lab/dino_3d_location.py'  # path to your detection script
 
         self.get_logger().info("RGBD Detection Server is ready.")
 

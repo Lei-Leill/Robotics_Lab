@@ -68,7 +68,6 @@ def run_detection(rgb_path, depth_path, label_list, data, output_path):
         # Append to result list
         detection_results.append({
             "label": label,
-            "coords_in_pixel": [u, v],  # "left_camera" or "right_camera"
             "coords_in_meter": [round(x, 4), round(y, 4), round(z_m, 4)],
         })
         # Draw and label
@@ -123,11 +122,6 @@ def main():
     parser = argparse.ArgumentParser(description="Grounding DINO + Depth")
     parser.add_argument("--folder", type=str, required=True, help="Folder path to camera info, rbg, and depth images of left and right camera")
     parser.add_argument("--label", type=str, required=True, help="Text file that contains comma-separated list of labels (e.g. a green cube,a blue cylinder)")
-
-    #parser.add_argument("--rgb", type=str, required=True, help="Path to RGB image (e.g. camera_lower_Color.png)")
-    #parser.add_argument("--depth", type=str, required=True, help="Path to aligned 16-bit depth image (e.g. camera_lower_Depth.png)")
-    #parser.add_argument("--info", type=str, required=True, help="Camera Info")
-    
 
     args = parser.parse_args()
     file = open(args.label, 'r')

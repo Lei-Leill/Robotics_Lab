@@ -5,7 +5,7 @@
 The sample inputs containing rbg, depth, labels, camera_info are in the sample_input folder
 
 ```
-python3 dino_3d_location.py --rgb sample_input/rgb.png --depth sample_input/depth.png --label sample_input/labels.txt --info sample_input/camera_info.json
+python3 dino_3d_location.py --folder suscribed_data --label labels.txt
 ```
 
 ## To get information from the Realsense-ROS

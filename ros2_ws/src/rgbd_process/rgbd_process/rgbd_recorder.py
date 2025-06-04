@@ -22,7 +22,7 @@ class RGBDRecorder(Node):
         self.depth_image = None
 
         # output directory
-        self.save_dir = f'/homes/tlei/Robotic/suscribed_data/{camera_name}'
+        self.save_dir = f'~/subscribed_data/{camera_name}'
         os.makedirs(self.save_dir, exist_ok=True)
         if not os.path.exists(self.save_dir):
             raise RuntimeError(f"Directory creation failed: {self.save_dir}")

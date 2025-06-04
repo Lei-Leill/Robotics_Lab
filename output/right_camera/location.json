@@ -1,62 +1,14 @@
 [
     {
-        "label": "a red triangular block",
-        "coords_in_pixel": [
-            210,
-            667
-        ],
-        "coords_in_meter": [
-            -0.2545,
-            0.1743,
-            0.375
-        ]
-    },
-    {
-        "label": "a blue cylinder",
-        "coords_in_pixel": [
-            1022,
-            133
-        ],
-        "coords_in_meter": [
-            0.4422,
-            -0.2776,
-            0.76
-        ]
-    },
-    {
-        "label": "a yellow cube",
-        "coords_in_pixel": [
-            50,
-            669
-        ],
-        "coords_in_meter": [
-            -0.0,
-            0.0,
-            0.0
-        ]
-    },
-    {
-        "label": "a green cube a green cylinder",
+        "label": "a green cube",
         "coords_in_pixel": [
             354,
-            636
+            637
         ],
         "coords_in_meter": [
             -0.1743,
-            0.1595,
+            0.1601,
             0.383
-        ]
-    },
-    {
-        "label": "a yellow cube",
-        "coords_in_pixel": [
-            327,
-            687
-        ],
-        "coords_in_meter": [
-            -0.1789,
-            0.1785,
-            0.36
         ]
     }
 ]

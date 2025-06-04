@@ -1,0 +1,38 @@
+[1.527s] Invoking command in '/homes/tlei/Robotics_Lab/ros2_ws/src/location_pub': PYTHONPATH=/homes/tlei/Robotics_Lab/ros2_ws/build/location_pub/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/homes/tlei/Robotics_Lab/ros2_ws/install/location_pub/lib/python3.10/site-packages:${PYTHONPATH} VIRTUAL_ENV_PROMPT=(.env) /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/location_pub build --build-base /homes/tlei/Robotics_Lab/ros2_ws/build/location_pub/build install --record /homes/tlei/Robotics_Lab/ros2_ws/build/location_pub/install.log --single-version-externally-managed install_data
+[1.817s] running egg_info
+[1.818s] creating ../../build/location_pub/location_pub.egg-info
+[1.820s] writing ../../build/location_pub/location_pub.egg-info/PKG-INFO
+[1.831s] writing dependency_links to ../../build/location_pub/location_pub.egg-info/dependency_links.txt
+[1.837s] writing entry points to ../../build/location_pub/location_pub.egg-info/entry_points.txt
+[1.843s] writing requirements to ../../build/location_pub/location_pub.egg-info/requires.txt
+[1.846s] writing top-level names to ../../build/location_pub/location_pub.egg-info/top_level.txt
+[1.852s] writing manifest file '../../build/location_pub/location_pub.egg-info/SOURCES.txt'
+[1.872s] reading manifest file '../../build/location_pub/location_pub.egg-info/SOURCES.txt'
+[1.879s] adding license file 'LICENSE'
+[1.880s] writing manifest file '../../build/location_pub/location_pub.egg-info/SOURCES.txt'
+[1.885s] running build
+[1.885s] running build_py
+[1.893s] creating /homes/tlei/Robotics_Lab/ros2_ws/build/location_pub/build
+[1.894s] creating /homes/tlei/Robotics_Lab/ros2_ws/build/location_pub/build/lib
+[1.896s] creating /homes/tlei/Robotics_Lab/ros2_ws/build/location_pub/build/lib/location_pub
+[1.903s] copying location_pub/__init__.py -> /homes/tlei/Robotics_Lab/ros2_ws/build/location_pub/build/lib/location_pub
+[1.917s] copying location_pub/publisher.py -> /homes/tlei/Robotics_Lab/ros2_ws/build/location_pub/build/lib/location_pub
+[1.932s] running install
+[1.932s] running install_lib
+[1.948s] creating /homes/tlei/Robotics_Lab/ros2_ws/install/location_pub/lib/python3.10/site-packages/location_pub
+[1.956s] copying /homes/tlei/Robotics_Lab/ros2_ws/build/location_pub/build/lib/location_pub/__init__.py -> /homes/tlei/Robotics_Lab/ros2_ws/install/location_pub/lib/python3.10/site-packages/location_pub
+[1.974s] copying /homes/tlei/Robotics_Lab/ros2_ws/build/location_pub/build/lib/location_pub/publisher.py -> /homes/tlei/Robotics_Lab/ros2_ws/install/location_pub/lib/python3.10/site-packages/location_pub
+[2.008s] byte-compiling /homes/tlei/Robotics_Lab/ros2_ws/install/location_pub/lib/python3.10/site-packages/location_pub/__init__.py to __init__.cpython-310.pyc
+[2.034s] byte-compiling /homes/tlei/Robotics_Lab/ros2_ws/install/location_pub/lib/python3.10/site-packages/location_pub/publisher.py to publisher.cpython-310.pyc
+[2.064s] running install_data
+[2.070s] creating /homes/tlei/Robotics_Lab/ros2_ws/install/location_pub/share/ament_index
+[2.073s] creating /homes/tlei/Robotics_Lab/ros2_ws/install/location_pub/share/ament_index/resource_index
+[2.076s] creating /homes/tlei/Robotics_Lab/ros2_ws/install/location_pub/share/ament_index/resource_index/packages
+[2.086s] copying resource/location_pub -> /homes/tlei/Robotics_Lab/ros2_ws/install/location_pub/share/ament_index/resource_index/packages
+[2.108s] copying package.xml -> /homes/tlei/Robotics_Lab/ros2_ws/install/location_pub/share/location_pub
+[2.124s] running install_egg_info
+[2.140s] Copying ../../build/location_pub/location_pub.egg-info to /homes/tlei/Robotics_Lab/ros2_ws/install/location_pub/lib/python3.10/site-packages/location_pub-0.0.0-py3.10.egg-info
+[2.456s] running install_scripts
+[2.491s] Installing publisher script to /homes/tlei/Robotics_Lab/ros2_ws/install/location_pub/lib/location_pub
+[2.512s] writing list of installed files to '/homes/tlei/Robotics_Lab/ros2_ws/build/location_pub/install.log'
+[2.543s] Invoked command in '/homes/tlei/Robotics_Lab/ros2_ws/src/location_pub' returned '0': PYTHONPATH=/homes/tlei/Robotics_Lab/ros2_ws/build/location_pub/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/homes/tlei/Robotics_Lab/ros2_ws/install/location_pub/lib/python3.10/site-packages:${PYTHONPATH} VIRTUAL_ENV_PROMPT=(.env) /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/location_pub build --build-base /homes/tlei/Robotics_Lab/ros2_ws/build/location_pub/build install --record /homes/tlei/Robotics_Lab/ros2_ws/build/location_pub/install.log --single-version-externally-managed install_data
