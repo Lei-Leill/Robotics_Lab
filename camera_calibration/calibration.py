@@ -27,7 +27,7 @@ image_files = glob.glob(rf'camera_calibration\calibration_images\{camera}\*.png'
 
 for image in image_files:
     
-    filename = image
+    filepath = image
     img = cv2.imread(image)
     image = cv2.cvtColor(img, cv2.COLOR_RGB2BGR)
      
@@ -39,12 +39,13 @@ for image in image_files:
         img_points_2D.append(corners2)
 
         img = cv2.drawChessboardCorners(image, Ch_Dim, corners2, ret)
-        # if 'prime' in filename:
-        #     output_path = f"camera_calibration/output/prime_right.png"
-        #     cv2.imwrite(output_path, img)
+        filename = filepath.split('\\')[-1]
+        # print(filename)
+        output_path = f"camera_calibration/output/{camera}/{filename}"
+        # Don't uncomment this
+        # cv2.imwrite(output_path, img)
         # cv2.imshow('img', img)
         # cv2.waitKey(0)
-        # print(filename)
     cv2.destroyAllWindows()
 
 ret, mtx, dist_coeff, R_vecs, T_vecs = cv2.calibrateCamera(obj_points_3D, img_points_2D, gray.shape[::-1], None, None)
@@ -56,8 +57,11 @@ for i in range(len(obj_points_3D)):
     mean_error += error
 print("total error: {}".format(mean_error/len(obj_points_3D)))
 
-R, _ = cv2.Rodrigues(R_vecs[-1])
-t = T_vecs[-1].reshape(3, 1)
+idx = 8
+
+print(image_files[idx])
+R, _ = cv2.Rodrigues(R_vecs[idx])
+t = T_vecs[idx].reshape(3, 1)
 
 Rt = np.hstack((R, t))
 
