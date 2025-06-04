@@ -17,10 +17,10 @@ If you want to testify whether they are launched successfully, do
 After this, you can proceed with the server and client packages 
 
 ## Server (Kiki) and Client (Chihiro) package 
-They are in ros2_ws/src/server_client, server will call dino_3d_location.py and the rgbd_process pkg to take real-time images
+They are in ```Robotics_Lab/ros2_ws/src/server_client/server_client```, ```server.py``` will call dino_3d_location.py and the rgbd_process pkg to take real-time images, ```client.py``` send request to server
 
 ### Before running it:
-Check whether the folder structure and location of files match with your setup
+Check that the folder structure and location of files match with your machine
 
 In server.py in directory ```Robotics_Lab/ros2_ws/server_client/server_client/server.py```
 
@@ -30,8 +30,10 @@ self.label_file = '/homes/tlei/Robotics_Lab/labels.txt'       # label file path
 self.grounding_dino_script = '/homes/tlei/Robotics_Lab/dino_3d_location.py'  # path to your detection script
 ```
 
+Once you are set up, you don't need to do these next time, just run it with following steps!
+
 ### Steps to run it
-Go to the ros2_ws repository
+Go to the ```ros2_ws``` repository
 
 Do the following steps to build the packages, source to the environment that ros2 run, and run the server
 
