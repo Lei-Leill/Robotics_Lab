@@ -12,15 +12,14 @@ def load_model(model_id="IDEA-Research/grounding-dino-tiny"):
     processor = AutoProcessor.from_pretrained(model_id)
     model = AutoModelForZeroShotObjectDetection.from_pretrained(model_id).to(device)
     return processor, model, device
+
 def camera_to_world(H, point_c):
     """Transform camera coordinates to world coordinates using homogeneous transformation matrix"""
-    R = H[:3, :3]
-    t = H[:3, 3]
-    return np.dot(R, point_c) + t
+    col_vec = point_c.reshape(-1, 1) # change the array to a column vector of shape (4*1)
+    result = np.dot(H, col_vec)
+    return result[:3].flatten()
 
-
-
-def run_detection(rgb_path, depth_path, label_list, data, output_path):
+def run_detection(rgb_path, depth_path, label_list, data, output_path, transformation_matrix):
     # Load images
     image = Image.open(rgb_path).convert("RGB")
     depth_image = cv2.imread(depth_path, cv2.IMREAD_UNCHANGED)  # 16-bit depth
@@ -54,6 +53,7 @@ def run_detection(rgb_path, depth_path, label_list, data, output_path):
 
     # Store all detection results here
     detection_results = []
+    world_point = [0,0,0]
     for box, score, label in zip(result["boxes"], result["scores"], result["labels"]):
         box = [round(x, 2) for x in box.tolist()]
         x_min, y_min, x_max, y_max = map(int, box)
@@ -72,30 +72,18 @@ def run_detection(rgb_path, depth_path, label_list, data, output_path):
         x, y = calculate_x_y(u,v, data['cx'], data['cy'], data['fx'], data['fy'], z_m)
         print(f"Transformed to meter unit/Camera coordinates: x={x:.4f}m, y={y:.4f}m, z={depth_str}")
         
-        if z_m is not None and 'transformation_matrix' in data:
-            H = np.array(data['transformation_matrix'])  # Assuming 4x4 matrix in JSON
-            camera_point = np.array([x, y, z_m])
+        if z_m is not None and transformation_matrix:
+            H = np.array(transformation_matrix)
+            camera_point = np.array([x, y, z_m,1])
             world_point = camera_to_world(H, camera_point)
-            coords_world = [round(float(v), 4) for v in world_pt]   # [Xw, Yw, Zw]
-            print(f"World coordinates: x={world_x:.4f}m, y={world_y:.4f}m, z={world_z:.4f}m")
 
-
-        # Append to result list
-            detection_results.append({
+            '''detection_results.append({
                 "label": label,
                 "coords_in_meter": [round(x, 4), round(y, 4), round(z_m, 4)],
                 "coords_in_world": coords_world
+            })'''
 
-        })
-
-        else:
-
-            # Store only camera coordinates if no transformation matrix
-            detection_results.append({
-                "label": label,
-                "coords_in_pixel": [u, v],
-                "coords_in_camera": [round(x, 4), round(y, 4), round(z_m, 4)],
-            })
+    
         # Draw and label
         draw.rectangle([x_min, y_min, x_max, y_max], outline="red", width=3)
         draw.text((x_min, y_min - 10), f"{label} ({depth_str})", fill="yellow")
@@ -103,30 +91,20 @@ def run_detection(rgb_path, depth_path, label_list, data, output_path):
     # Save annotated image
     image_path = os.path.join(output_path, "image_bouding_box.png")
     image.save(image_path)
-    
+    '''
     # Save detection results to JSON
     json_path = os.path.join(output_path, "location.json")
     with open(json_path, "w") as f:
-        json.dump(detection_results, f, indent=4)
-    print(f"Annotated image and location data saved to {output_path}")
+        json.dump(detection_results, f, indent=4)'''
+    #print(f"Annotated image saved to {output_path}")
+    return world_point
 
 
 #Transformation code
 def calculate_x_y(x_prime,y_prime,c_x, c_y, f_x, f_y,z):
   """
   Calculates the (x), and (y) given the image distance(x_ prime) and (y_ prime) ,
-   and the principal points (c_x) and (c_y) ,object distance from lens (z), and focal length (f).
-
-  Args:
-    x: The object distance (x).
-    y: The object distance (y).
-    z: The object distance from the lens (z).
-    f_x: The x-coordinate of the focal length of the lens (f).
-    f_y = The y-coordinate of the focal length of the lens (f).
-    x_prime: The image distance (x_prime).
-    y_prime: The image distance (y_prime).
-    c_x: The x-coordinate of the center of the lens (c_x),.
-    c_y: The y-coordinate of the center of the lens (c_y).
+  and the principal points (c_x) and (c_y) ,object distance from lens (z), and focal length (f).
 
   Returns: x, y
   """
@@ -154,6 +132,17 @@ def main():
     content = file.read()
     label_list = [label.strip() for label in content.split(',')]
 
+    transformation_matrix = [[[ 0.99009612, -0.01594327, -0.13948292,  0.42709209],
+                            [ 0.09441481, -0.65968152,  0.74559113, -0.75780215],
+                            [-0.10390147, -0.75137614, -0.65164283,  0.50147743],
+                            [ 0.,          0. ,         0.   ,       1.        ]], 
+
+                            [[-0.99950439, -0.03119223, -0.00424504,  0.4710198 ],
+                            [-0.01747422,  0.66191747, -0.74937301,  0.8043515 ],
+                            [ 0.02618447, -0.74892744, -0.66213447,  0.40551513],
+                            [ 0. ,         0. ,         0. ,         1.        ]]]
+    i = 0
+    left_right_point = []
     for name in ['left_camera', 'right_camera']:
         camera_path = os.path.join(args.folder, name)
         #print(camera_path)
@@ -174,7 +163,15 @@ def main():
         print(f"\nObject Detection Running for {name}!!")
         output_dir = f"output/{name}"
         os.makedirs(output_dir, exist_ok=True)
-        run_detection(rgb_path, depth_path, label_list, data, output_dir)
+        world_p = run_detection(rgb_path, depth_path, label_list, data, output_dir, transformation_matrix[i])
+        print(f'index {i}: {world_p}')
+        left_right_point.append(world_p)
+        i += 1
+    
+    print("World Coordinate for the detected object")
+    for array in left_right_point:
+        print(array)
+
 
 if __name__ == "__main__":
     main()
