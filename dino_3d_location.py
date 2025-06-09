@@ -63,6 +63,7 @@ def run_detection(rgb_path, depth_path, label_list, data, output_path, transform
         if 0 <= v < depth_image.shape[0] and 0 <= u < depth_image.shape[1]:
             z_mm = depth_image[v, u]
             z_m = z_mm / 1000.0
+            #z_m = 1.23
             depth_str = f"{z_m:.2f} m"
         else:
             z_m = None
@@ -168,7 +169,7 @@ def main():
         left_right_point.append(world_p)
         i += 1
     
-    print("World Coordinate for the detected object")
+    print("\nWorld Coordinate for the detected object")
     for array in left_right_point:
         print(array)
 
