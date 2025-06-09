@@ -51,27 +51,23 @@ for image in image_files:
 
     cv2.destroyAllWindows()
 
-ret, mtx, dist_coeff, R_vecs, T_vecs = cv2.calibrateCamera(obj_points_3D, img_points_2D, gray.shape[::-1], None, None)
+# ret, old_mtx, old_dist_coeff, old_R_vecs, old_T_vecs = cv2.calibrateCamera(obj_points_3D, img_points_2D, gray.shape[::-1], None, None)
 
-mean_error = 0
-for i in range(len(obj_points_3D)):
-    imgpoints2, _ = cv2.projectPoints(obj_points_3D[i], R_vecs[i], T_vecs[i], mtx, dist_coeff)
-    error = cv2.norm(img_points_2D[i], imgpoints2, cv2.NORM_L2)/len(imgpoints2)
-    mean_error += error
-print("total error: {}".format(mean_error/len(obj_points_3D)))
+total_mtx = np.array([[[645.9848022460938, 0, 639.00927734375], [0, 645.2113647460938, 361.0145263671875], [0, 0, 1]],
+                      [[644.1821899414062, 0, 647.15283203125], [0, 643.3673706054688, 368.00286865234375], [0, 0, 1]]])
+total_dist = np.array([[-0.05537797138094902,0.06713823974132538,-0.0002206100180046633,0.0003125208313576877,-0.02147624082863331], 
+                       [-0.056005097925662994,0.06765501201152802,0.00024983854382298887,0.0006985375075601041,0.021450236439704895]])
+
+mtx = total_mtx[0] if camera == 'left' else total_mtx[1]
+dist_coeff = total_dist[0] if camera == 'left' else total_dist[1]
 
 idx = 8
 
-# Drawing axes
-# axes_img_dir = f"camera_calibration/output/{camera}/{camera}_17_Color.png"
-# axes_img = cv2.imread(axes_img_dir)
-# axes_img = cv2.drawFrameAxes(axes_img, mtx, dist_coeff, R_vecs[idx], T_vecs[idx], length=0.2)
-# output_path = f"camera_calibration/output/axes/{camera}_17_Color.png"
-# cv2.imwrite(output_path, axes_img)
+ret, R_vecs, T_vecs = cv2.solvePnP(obj_points_3D[idx], img_points_2D[idx], mtx, dist_coeff)
 
 print(image_files[idx])
-R, _ = cv2.Rodrigues(R_vecs[idx])
-t = T_vecs[idx].reshape(3, 1)
+R, _ = cv2.Rodrigues(R_vecs)
+t = T_vecs.reshape(3, 1)
 
 adjusted_t = -R.T @ t
 
@@ -80,9 +76,19 @@ Rt = np.hstack((R, t))
 print(Rt)
 print(adjusted_t)
 
-# print(mtx)
-
-# P = mtx @ Rt
-# print(P)
-
 print("calibrated")
+
+# Drawing axes
+# axes_img_dir = f"camera_calibration/output/{camera}/{camera}_17_Color.png"
+# axes_img = cv2.imread(axes_img_dir)
+# axes_img = cv2.drawFrameAxes(axes_img, mtx, dist_coeff, R_vecs[idx], T_vecs[idx], length=0.2)
+# output_path = f"camera_calibration/output/axes/{camera}_17_Color.png"
+# cv2.imwrite(output_path, axes_img)
+
+# Doesn't work anymore :(
+# mean_error = 0
+# for i in range(len(obj_points_3D)):
+#     imgpoints2, _ = cv2.projectPoints(obj_points_3D[i], R_vecs[i], T_vecs[i], mtx, dist_coeff)
+#     error = cv2.norm(img_points_2D[i], imgpoints2, cv2.NORM_L2)/len(imgpoints2)
+#     mean_error += error
+# print("total error: {}".format(mean_error/len(obj_points_3D)))
