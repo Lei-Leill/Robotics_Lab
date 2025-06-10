@@ -1,0 +1,22 @@
+[100%] Built target custom_controller
+-- Install configuration: ""
+-- Up-to-date: /homes/obluman/robotics_ws/install/custom_controller/lib/custom_controller/custom_controller
+-- Up-to-date: /homes/obluman/robotics_ws/install/custom_controller/share/custom_controller/launch
+-- Installing: /homes/obluman/robotics_ws/install/custom_controller/share/custom_controller/launch/custom_controller_launch.py
+-- Up-to-date: /homes/obluman/robotics_ws/install/custom_controller/share/custom_controller/config
+-- Up-to-date: /homes/obluman/robotics_ws/install/custom_controller/share/custom_controller/config/controllers.yaml
+-- Up-to-date: /homes/obluman/robotics_ws/install/custom_controller/share/ament_index/resource_index/package_run_dependencies/custom_controller
+-- Up-to-date: /homes/obluman/robotics_ws/install/custom_controller/share/ament_index/resource_index/parent_prefix_path/custom_controller
+-- Up-to-date: /homes/obluman/robotics_ws/install/custom_controller/share/custom_controller/environment/ament_prefix_path.sh
+-- Up-to-date: /homes/obluman/robotics_ws/install/custom_controller/share/custom_controller/environment/ament_prefix_path.dsv
+-- Up-to-date: /homes/obluman/robotics_ws/install/custom_controller/share/custom_controller/environment/path.sh
+-- Up-to-date: /homes/obluman/robotics_ws/install/custom_controller/share/custom_controller/environment/path.dsv
+-- Up-to-date: /homes/obluman/robotics_ws/install/custom_controller/share/custom_controller/local_setup.bash
+-- Up-to-date: /homes/obluman/robotics_ws/install/custom_controller/share/custom_controller/local_setup.sh
+-- Up-to-date: /homes/obluman/robotics_ws/install/custom_controller/share/custom_controller/local_setup.zsh
+-- Up-to-date: /homes/obluman/robotics_ws/install/custom_controller/share/custom_controller/local_setup.dsv
+-- Up-to-date: /homes/obluman/robotics_ws/install/custom_controller/share/custom_controller/package.dsv
+-- Up-to-date: /homes/obluman/robotics_ws/install/custom_controller/share/ament_index/resource_index/packages/custom_controller
+-- Up-to-date: /homes/obluman/robotics_ws/install/custom_controller/share/custom_controller/cmake/custom_controllerConfig.cmake
+-- Up-to-date: /homes/obluman/robotics_ws/install/custom_controller/share/custom_controller/cmake/custom_controllerConfig-version.cmake
+-- Up-to-date: /homes/obluman/robotics_ws/install/custom_controller/share/custom_controller/package.xml

@@ -1,0 +1,68 @@
+[0.030s] Invoking command in '/homes/obluman/robotics_ws/build/custom_controller': CMAKE_PREFIX_PATH=/homes/obluman/robotics_ws/install/custom_controller:/opt/ros/humble:/homes/obluman/robo_ws/install/my_custom_controller:/bigdata/thao/franka_ros2_ws/install/franka_ros2:/bigdata/thao/franka_ros2_ws/install/franka_bringup:/bigdata/thao/franka_ros2_ws/install/franka_robot_state_broadcaster:/bigdata/thao/franka_ros2_ws/install/franka_example_controllers:/bigdata/thao/franka_ros2_ws/install/franka_semantic_components:/bigdata/thao/franka_ros2_ws/install/franka_gazebo_bringup:/bigdata/thao/franka_ros2_ws/install/franka_ign_ros2_control:/bigdata/thao/franka_ros2_ws/install/franka_fr3_moveit_config:/bigdata/thao/franka_ros2_ws/install/franka_hardware:/bigdata/thao/franka_ros2_ws/install/franka_gripper:/bigdata/thao/franka_ros2_ws/install/libfranka:/bigdata/thao/franka_ros2_ws/install/integration_launch_testing:/bigdata/thao/franka_ros2_ws/install/franka_msgs:/bigdata/thao/franka_ros2_ws/install/franka_description /usr/bin/cmake /homes/obluman/robotics_ws/src/custom_controller -DCMAKE_INSTALL_PREFIX=/homes/obluman/robotics_ws/install/custom_controller
+[0.146s] -- The C compiler identification is GNU 13.1.0
+[0.251s] -- The CXX compiler identification is GNU 13.1.0
+[0.264s] -- Detecting C compiler ABI info
+[0.448s] -- Detecting C compiler ABI info - done
+[0.464s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.464s] -- Detecting C compile features
+[0.465s] -- Detecting C compile features - done
+[0.476s] -- Detecting CXX compiler ABI info
+[0.732s] -- Detecting CXX compiler ABI info - done
+[0.745s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.745s] -- Detecting CXX compile features
+[0.746s] -- Detecting CXX compile features - done
+[0.755s] -- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.930s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[1.043s] -- Found rclcpp: 16.0.12 (/opt/ros/humble/share/rclcpp/cmake)
+[1.099s] -- Found rosidl_generator_c: 3.1.6 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[1.104s] -- Found rosidl_adapter: 3.1.6 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[1.113s] -- Found rosidl_generator_cpp: 3.1.6 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[1.126s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.142s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.187s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[1.190s] -- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[1.356s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[1.441s] -- Found FastRTPS: /opt/ros/humble/include  
+[1.566s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.617s] -- Looking for pthread.h
+[1.808s] -- Looking for pthread.h - found
+[1.811s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[2.043s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[2.045s] -- Found Threads: TRUE  
+[2.171s] -- Found rclcpp_action: 16.0.12 (/opt/ros/humble/share/rclcpp_action/cmake)
+[2.233s] -- Found franka_msgs: 1.0.0 (/bigdata/thao/franka_ros2_ws/install/franka_msgs/share/franka_msgs/cmake)
+[2.312s] -- Found ament_lint_auto: 0.12.12 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[2.430s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[2.430s] -- Configured cppcheck include dirs: 
+[2.430s] -- Configured cppcheck exclude dirs and/or files: 
+[2.432s] -- Added test 'flake8' to check Python code syntax and style conventions
+[2.436s] -- Added test 'lint_cmake' to check CMake code style
+[2.439s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[2.447s] -- Added test 'uncrustify' to check C / C++ code style
+[2.448s] -- Configured uncrustify additional arguments: 
+[2.450s] -- Added test 'xmllint' to check XML markup files
+[2.463s] -- Configuring done
+[2.539s] -- Generating done
+[2.574s] -- Build files have been written to: /homes/obluman/robotics_ws/build/custom_controller
+[2.585s] Invoked command in '/homes/obluman/robotics_ws/build/custom_controller' returned '0': CMAKE_PREFIX_PATH=/homes/obluman/robotics_ws/install/custom_controller:/opt/ros/humble:/homes/obluman/robo_ws/install/my_custom_controller:/bigdata/thao/franka_ros2_ws/install/franka_ros2:/bigdata/thao/franka_ros2_ws/install/franka_bringup:/bigdata/thao/franka_ros2_ws/install/franka_robot_state_broadcaster:/bigdata/thao/franka_ros2_ws/install/franka_example_controllers:/bigdata/thao/franka_ros2_ws/install/franka_semantic_components:/bigdata/thao/franka_ros2_ws/install/franka_gazebo_bringup:/bigdata/thao/franka_ros2_ws/install/franka_ign_ros2_control:/bigdata/thao/franka_ros2_ws/install/franka_fr3_moveit_config:/bigdata/thao/franka_ros2_ws/install/franka_hardware:/bigdata/thao/franka_ros2_ws/install/franka_gripper:/bigdata/thao/franka_ros2_ws/install/libfranka:/bigdata/thao/franka_ros2_ws/install/integration_launch_testing:/bigdata/thao/franka_ros2_ws/install/franka_msgs:/bigdata/thao/franka_ros2_ws/install/franka_description /usr/bin/cmake /homes/obluman/robotics_ws/src/custom_controller -DCMAKE_INSTALL_PREFIX=/homes/obluman/robotics_ws/install/custom_controller
+[2.590s] Invoking command in '/homes/obluman/robotics_ws/build/custom_controller': CMAKE_PREFIX_PATH=/homes/obluman/robotics_ws/install/custom_controller:/opt/ros/humble:/homes/obluman/robo_ws/install/my_custom_controller:/bigdata/thao/franka_ros2_ws/install/franka_ros2:/bigdata/thao/franka_ros2_ws/install/franka_bringup:/bigdata/thao/franka_ros2_ws/install/franka_robot_state_broadcaster:/bigdata/thao/franka_ros2_ws/install/franka_example_controllers:/bigdata/thao/franka_ros2_ws/install/franka_semantic_components:/bigdata/thao/franka_ros2_ws/install/franka_gazebo_bringup:/bigdata/thao/franka_ros2_ws/install/franka_ign_ros2_control:/bigdata/thao/franka_ros2_ws/install/franka_fr3_moveit_config:/bigdata/thao/franka_ros2_ws/install/franka_hardware:/bigdata/thao/franka_ros2_ws/install/franka_gripper:/bigdata/thao/franka_ros2_ws/install/libfranka:/bigdata/thao/franka_ros2_ws/install/integration_launch_testing:/bigdata/thao/franka_ros2_ws/install/franka_msgs:/bigdata/thao/franka_ros2_ws/install/franka_description /usr/bin/cmake --build /homes/obluman/robotics_ws/build/custom_controller -- -j12 -l12
+[2.685s] [ 50%] [32mBuilding CXX object CMakeFiles/custom_controller.dir/src/custom_controller.cpp.o[0m
+[4.858s] [01m[K/homes/obluman/robotics_ws/src/custom_controller/src/custom_controller.cpp:[m[K In lambda function:
+[4.858s] [01m[K/homes/obluman/robotics_ws/src/custom_controller/src/custom_controller.cpp:54:18:[m[K [01;31m[Kerror: [m[K‘[01m[Kstruct franka_msgs::action::Grasp_Goal_<std::allocator<void> >[m[K’ has no member named ‘[01m[Kepsilon_inner[m[K’
+[4.858s]    54 |       grasp_goal.[01;31m[Kepsilon_inner[m[K = 0.01;
+[4.859s]       |                  [01;31m[K^~~~~~~~~~~~~[m[K
+[4.859s] [01m[K/homes/obluman/robotics_ws/src/custom_controller/src/custom_controller.cpp:55:18:[m[K [01;31m[Kerror: [m[K‘[01m[Kstruct franka_msgs::action::Grasp_Goal_<std::allocator<void> >[m[K’ has no member named ‘[01m[Kepsilon_outer[m[K’
+[4.859s]    55 |       grasp_goal.[01;31m[Kepsilon_outer[m[K = 0.01;
+[4.859s]       |                  [01;31m[K^~~~~~~~~~~~~[m[K
+[4.859s] [01m[K/homes/obluman/robotics_ws/src/custom_controller/src/custom_controller.cpp:[m[K In lambda function:
+[4.859s] [01m[K/homes/obluman/robotics_ws/src/custom_controller/src/custom_controller.cpp:58:90:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kresult[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[4.859s]    58 |       grasp_goal_options.result_callback = [this]([01;35m[Kconst GraspGoalHandle::WrappedResult & result[m[K) {
+[4.860s]       |                                                   [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~[m[K
+[4.871s] [01m[K/homes/obluman/robotics_ws/src/custom_controller/src/custom_controller.cpp:[m[K In lambda function:
+[4.871s] [01m[K/homes/obluman/robotics_ws/src/custom_controller/src/custom_controller.cpp:47:86:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kresult[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[4.871s]    47 |     move_goal_options.result_callback = [this]([01;35m[Kconst MoveGoalHandle::WrappedResult & result[m[K) {
+[4.871s]       |                                                [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~[m[K
+[5.568s] gmake[2]: *** [CMakeFiles/custom_controller.dir/build.make:76: CMakeFiles/custom_controller.dir/src/custom_controller.cpp.o] Error 1
+[5.568s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/custom_controller.dir/all] Error 2
+[5.569s] gmake: *** [Makefile:146: all] Error 2
+[5.571s] Invoked command in '/homes/obluman/robotics_ws/build/custom_controller' returned '2': CMAKE_PREFIX_PATH=/homes/obluman/robotics_ws/install/custom_controller:/opt/ros/humble:/homes/obluman/robo_ws/install/my_custom_controller:/bigdata/thao/franka_ros2_ws/install/franka_ros2:/bigdata/thao/franka_ros2_ws/install/franka_bringup:/bigdata/thao/franka_ros2_ws/install/franka_robot_state_broadcaster:/bigdata/thao/franka_ros2_ws/install/franka_example_controllers:/bigdata/thao/franka_ros2_ws/install/franka_semantic_components:/bigdata/thao/franka_ros2_ws/install/franka_gazebo_bringup:/bigdata/thao/franka_ros2_ws/install/franka_ign_ros2_control:/bigdata/thao/franka_ros2_ws/install/franka_fr3_moveit_config:/bigdata/thao/franka_ros2_ws/install/franka_hardware:/bigdata/thao/franka_ros2_ws/install/franka_gripper:/bigdata/thao/franka_ros2_ws/install/libfranka:/bigdata/thao/franka_ros2_ws/install/integration_launch_testing:/bigdata/thao/franka_ros2_ws/install/franka_msgs:/bigdata/thao/franka_ros2_ws/install/franka_description /usr/bin/cmake --build /homes/obluman/robotics_ws/build/custom_controller -- -j12 -l12
