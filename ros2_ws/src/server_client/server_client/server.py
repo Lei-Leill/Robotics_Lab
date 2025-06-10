@@ -5,6 +5,8 @@ from std_srvs.srv import Trigger  # simple service with no input, just success +
 import subprocess
 import json
 import os
+import re, ast
+
 
 class RGBDDetectionServer(Node):
     def __init__(self):
@@ -49,6 +51,7 @@ class RGBDDetectionServer(Node):
             capture_output=True,
             text=True
         )
+        self.get_logger().info(proc.stdout)
         if proc.returncode != 0:
             response.success = False
             response.message = f"Grounding DINO detection failed: {proc.stderr}"
@@ -56,30 +59,20 @@ class RGBDDetectionServer(Node):
             return response
 
         self.get_logger().info("Detection complete.")
+        self.get_logger().info(proc.stdout)
 
-        # Step 3: Read the detection JSON result from output folders
-        # Assuming output folder format: output/{left_camera,right_camera}/location.json
-        left_json_path = os.path.join("output", "left_camera", "location.json")
-        right_json_path = os.path.join("output", "right_camera", "location.json")
-
-        results = {}
-        try:
-            with open(left_json_path, "r") as f:
-                results['left_camera'] = json.load(f)
-            with open(right_json_path, "r") as f:
-                results['right_camera'] = json.load(f)
-        except Exception as e:
-            response.success = False
-            response.message = f"Failed to load detection results: {str(e)}"
-            self.get_logger().error(response.message)
-            return response
-
-        # Step 4: Return results as JSON string
+        # Step 3: Read the detection result from output
+        matches = re.findall(r"DETECTION_RESULT:\s*(\[.*?\])", proc.stdout)
+        if matches:
+            coords = ast.literal_eval(matches[0])
+        else:
+            # handle the case where no result was found
+            self.get_logger().info("Detection result not found.")
         response.success = True
-        response.message = json.dumps(results)
-        self.get_logger().info("Sending detection results to client.")
-
+        response.message = str(coords)  # You must send string via std_srvs/Trigger
+        self.get_logger().info("Result Sent! Check it out at Client.")
         return response
+
 
 
 def main(args=None):

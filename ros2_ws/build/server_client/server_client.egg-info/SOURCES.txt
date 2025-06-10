@@ -12,7 +12,6 @@ setup.py
 resource/server_client
 server_client/__init__.py
 server_client/client.py
-server_client/dino_3d_location.py
 server_client/server.py
 test/test_copyright.py
 test/test_flake8.py

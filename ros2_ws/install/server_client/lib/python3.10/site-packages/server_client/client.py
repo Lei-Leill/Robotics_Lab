@@ -1,6 +1,7 @@
 import rclpy
 from rclpy.node import Node
 from std_srvs.srv import Trigger
+import ast, re
 
 def main(args=None):
     rclpy.init(args=args)
@@ -17,8 +18,10 @@ def main(args=None):
 
     if future.result() is not None:
         if future.result().success:
-            print("Detection result:")
-            print(future.result().message)  # JSON string of detection data
+            coords = ast.literal_eval(future.result().message)
+            print(coords)
+            '''print("Detection result:")
+            print(future.result().message)  # JSON string of detection data'''
         else:
             print("Detection failed:", future.result().message)
     else:

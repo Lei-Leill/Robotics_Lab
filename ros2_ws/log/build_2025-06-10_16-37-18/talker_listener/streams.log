@@ -1,0 +1,22 @@
+[2.525s] Invoking command in '/homes/tlei/Robotics_Lab/ros2_ws/src/talker_listener': PYTHONPATH=/homes/tlei/Robotics_Lab/ros2_ws/build/talker_listener/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/homes/tlei/Robotics_Lab/ros2_ws/install/talker_listener/lib/python3.10/site-packages:${PYTHONPATH} VIRTUAL_ENV_PROMPT=(.env) /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/talker_listener build --build-base /homes/tlei/Robotics_Lab/ros2_ws/build/talker_listener/build install --record /homes/tlei/Robotics_Lab/ros2_ws/build/talker_listener/install.log --single-version-externally-managed install_data
+[2.961s] running egg_info
+[2.964s] writing ../../build/talker_listener/talker_listener.egg-info/PKG-INFO
+[2.970s] writing dependency_links to ../../build/talker_listener/talker_listener.egg-info/dependency_links.txt
+[2.975s] writing entry points to ../../build/talker_listener/talker_listener.egg-info/entry_points.txt
+[2.979s] writing requirements to ../../build/talker_listener/talker_listener.egg-info/requires.txt
+[2.982s] writing top-level names to ../../build/talker_listener/talker_listener.egg-info/top_level.txt
+[3.004s] reading manifest file '../../build/talker_listener/talker_listener.egg-info/SOURCES.txt'
+[3.009s] writing manifest file '../../build/talker_listener/talker_listener.egg-info/SOURCES.txt'
+[3.013s] running build
+[3.013s] running build_py
+[3.022s] running install
+[3.022s] running install_lib
+[3.034s] running install_data
+[3.039s] running install_egg_info
+[3.041s] removing '/homes/tlei/Robotics_Lab/ros2_ws/install/talker_listener/lib/python3.10/site-packages/talker_listener-0.0.0-py3.10.egg-info' (and everything under it)
+[3.056s] Copying ../../build/talker_listener/talker_listener.egg-info to /homes/tlei/Robotics_Lab/ros2_ws/install/talker_listener/lib/python3.10/site-packages/talker_listener-0.0.0-py3.10.egg-info
+[3.137s] running install_scripts
+[3.172s] Installing listener script to /homes/tlei/Robotics_Lab/ros2_ws/install/talker_listener/lib/talker_listener
+[3.177s] Installing talker script to /homes/tlei/Robotics_Lab/ros2_ws/install/talker_listener/lib/talker_listener
+[3.184s] writing list of installed files to '/homes/tlei/Robotics_Lab/ros2_ws/build/talker_listener/install.log'
+[3.262s] Invoked command in '/homes/tlei/Robotics_Lab/ros2_ws/src/talker_listener' returned '0': PYTHONPATH=/homes/tlei/Robotics_Lab/ros2_ws/build/talker_listener/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/homes/tlei/Robotics_Lab/ros2_ws/install/talker_listener/lib/python3.10/site-packages:${PYTHONPATH} VIRTUAL_ENV_PROMPT=(.env) /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/talker_listener build --build-base /homes/tlei/Robotics_Lab/ros2_ws/build/talker_listener/build install --record /homes/tlei/Robotics_Lab/ros2_ws/build/talker_listener/install.log --single-version-externally-managed install_data

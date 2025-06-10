@@ -39,14 +39,14 @@ Do the following steps to build the packages, source to the environment that ros
 
 ```
 colcon build
-source intall/setup.bash
+source install/setup.bash
 ros2 run server_client server
 ```
 
 Open another terminal (Kiki or Chihiro). Do the following:
 ```
 colcon build
-source intall/setup.bash
+source install/setup.bash
 ros2 run server_client client
 ```
 
@@ -65,7 +65,7 @@ You can see the information sent back in the terminal after the server has finis
 
 ## Just run the object detection with Dino
 
-suscribed_data folder contains camera information, rgb image, depth image for left and right camera
+subscribed_data folder contains camera information, rgb image, depth image for left and right camera
 
 you can make changes the labels.txt to control what object you want to detect and get location info.
 ```

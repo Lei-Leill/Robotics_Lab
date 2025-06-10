@@ -69,9 +69,9 @@ def run_detection(rgb_path, depth_path, label_list, data, output_path, transform
             z_m = None
             depth_str = "no depth"
 
-        print(f"Detected {label} at (x={u}, y={v})")
+        #print(f"Detected {label} at (x={u}, y={v})")
         x, y = calculate_x_y(u,v, data['cx'], data['cy'], data['fx'], data['fy'], z_m)
-        print(f"Transformed to meter unit/Camera coordinates: x={x:.4f}m, y={y:.4f}m, z={depth_str}")
+        #print(f"Transformed to meter unit/Camera coordinates: x={x:.4f}m, y={y:.4f}m, z={depth_str}")
         
         if z_m is not None and transformation_matrix:
             H = np.array(transformation_matrix)
@@ -133,17 +133,17 @@ def main():
     content = file.read()
     label_list = [label.strip() for label in content.split(',')]
 
-    transformation_matrix = [[[ 0.99009612, -0.01594327, -0.13948292,  0.42709209],
-                            [ 0.09441481, -0.65968152,  0.74559113, -0.75780215],
-                            [-0.10390147, -0.75137614, -0.65164283,  0.50147743],
-                            [ 0.,          0. ,         0.   ,       1.        ]], 
+    transformation_matrix = [[[0.99016408, -0.00400559, -0.13985367,  0.41902076],
+                            [ 0.10285259, -0.65681041,  0.74700832, -0.79932346],
+                            [-0.09484956, -0.75404512, -0.64993809,  0.45859295],
+                            [ 0. ,         0. ,         0.,          1.        ]],
 
                             [[-0.99950439, -0.03119223, -0.00424504,  0.4710198 ],
                             [-0.01747422,  0.66191747, -0.74937301,  0.8043515 ],
                             [ 0.02618447, -0.74892744, -0.66213447,  0.40551513],
-                            [ 0. ,         0. ,         0. ,         1.        ]]]
+                            [ 0. ,         0.  ,        0. ,         1.        ]]]
     i = 0
-    left_right_point = []
+    det_result = []
     for name in ['left_camera', 'right_camera']:
         camera_path = os.path.join(args.folder, name)
         #print(camera_path)
@@ -165,14 +165,25 @@ def main():
         output_dir = f"output/{name}"
         os.makedirs(output_dir, exist_ok=True)
         world_p = run_detection(rgb_path, depth_path, label_list, data, output_dir, transformation_matrix[i])
-        print(f'index {i}: {world_p}')
-        left_right_point.append(world_p)
+        print(f'{name} world point: {world_p}')
+        det_result.append(world_p)
         i += 1
     
-    print("\nWorld Coordinate for the detected object")
-    for array in left_right_point:
-        print(array)
+    
+    avg_arr = []
+    length = len(det_result)
+    if length == 2:
+        avg_arr = [float((det_result[0][i] + det_result[1][i])/2) for i in range(3)]
+    elif length == 1:
+        avg_arr = array
+    else:
+        return None
+    print(f"DETECTION_RESULT:{avg_arr}")    
+    return avg_arr
+
 
 
 if __name__ == "__main__":
     main()
+    
+

@@ -1,0 +1,29 @@
+[0.849s] Invoking command in '/homes/tlei/Robotics_Lab/ros2_ws/src/server_client': PYTHONPATH=/homes/tlei/Robotics_Lab/ros2_ws/build/server_client/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/homes/tlei/Robotics_Lab/ros2_ws/install/server_client/lib/python3.10/site-packages:${PYTHONPATH} VIRTUAL_ENV_PROMPT=(.env) /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/server_client build --build-base /homes/tlei/Robotics_Lab/ros2_ws/build/server_client/build install --record /homes/tlei/Robotics_Lab/ros2_ws/build/server_client/install.log --single-version-externally-managed install_data
+[1.126s] running egg_info
+[1.127s] writing ../../build/server_client/server_client.egg-info/PKG-INFO
+[1.129s] writing dependency_links to ../../build/server_client/server_client.egg-info/dependency_links.txt
+[1.131s] writing entry points to ../../build/server_client/server_client.egg-info/entry_points.txt
+[1.132s] writing requirements to ../../build/server_client/server_client.egg-info/requires.txt
+[1.134s] writing top-level names to ../../build/server_client/server_client.egg-info/top_level.txt
+[1.139s] reading manifest file '../../build/server_client/server_client.egg-info/SOURCES.txt'
+[1.141s] adding license file 'LICENSE'
+[1.142s] writing manifest file '../../build/server_client/server_client.egg-info/SOURCES.txt'
+[1.143s] running build
+[1.143s] running build_py
+[1.143s] copying server_client/client.py -> /homes/tlei/Robotics_Lab/ros2_ws/build/server_client/build/lib/server_client
+[1.145s] copying server_client/server.py -> /homes/tlei/Robotics_Lab/ros2_ws/build/server_client/build/lib/server_client
+[1.147s] running install
+[1.148s] running install_lib
+[1.149s] copying /homes/tlei/Robotics_Lab/ros2_ws/build/server_client/build/lib/server_client/client.py -> /homes/tlei/Robotics_Lab/ros2_ws/install/server_client/lib/python3.10/site-packages/server_client
+[1.151s] copying /homes/tlei/Robotics_Lab/ros2_ws/build/server_client/build/lib/server_client/server.py -> /homes/tlei/Robotics_Lab/ros2_ws/install/server_client/lib/python3.10/site-packages/server_client
+[1.154s] byte-compiling /homes/tlei/Robotics_Lab/ros2_ws/install/server_client/lib/python3.10/site-packages/server_client/client.py to client.cpython-310.pyc
+[1.157s] byte-compiling /homes/tlei/Robotics_Lab/ros2_ws/install/server_client/lib/python3.10/site-packages/server_client/server.py to server.cpython-310.pyc
+[1.160s] running install_data
+[1.160s] running install_egg_info
+[1.162s] removing '/homes/tlei/Robotics_Lab/ros2_ws/install/server_client/lib/python3.10/site-packages/server_client-0.0.0-py3.10.egg-info' (and everything under it)
+[1.166s] Copying ../../build/server_client/server_client.egg-info to /homes/tlei/Robotics_Lab/ros2_ws/install/server_client/lib/python3.10/site-packages/server_client-0.0.0-py3.10.egg-info
+[1.181s] running install_scripts
+[1.205s] Installing client script to /homes/tlei/Robotics_Lab/ros2_ws/install/server_client/lib/server_client
+[1.207s] Installing server script to /homes/tlei/Robotics_Lab/ros2_ws/install/server_client/lib/server_client
+[1.209s] writing list of installed files to '/homes/tlei/Robotics_Lab/ros2_ws/build/server_client/install.log'
+[1.230s] Invoked command in '/homes/tlei/Robotics_Lab/ros2_ws/src/server_client' returned '0': PYTHONPATH=/homes/tlei/Robotics_Lab/ros2_ws/build/server_client/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/homes/tlei/Robotics_Lab/ros2_ws/install/server_client/lib/python3.10/site-packages:${PYTHONPATH} VIRTUAL_ENV_PROMPT=(.env) /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/server_client build --build-base /homes/tlei/Robotics_Lab/ros2_ws/build/server_client/build install --record /homes/tlei/Robotics_Lab/ros2_ws/build/server_client/install.log --single-version-externally-managed install_data
