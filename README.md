@@ -3,10 +3,10 @@
 ## Initialize the ROS2 camera topics
 If need the real-time image, must launch ros for each camera to begin
 
-if you are not in the (.env) virtual environment, do this:
+Be sure you are in the (.env) virtual environment that has ros2 installed, do this:
 ```source /bigdata/thao/.env/bin/activate```
 
-Launch two cameras separately in two terminals 
+Make sure to connect the wires of cameras to computer and launch two cameras separately in two terminals 
 ```
 ros2 run realsense2_camera realsense2_camera_node --ros-args -r __node:=left_camera -p serial_no:=_239222303493 -p align_depth.enable:=true
 ros2 run realsense2_camera realsense2_camera_node --ros-args -r __node:=right_camera -p serial_no:=_239222302270 -p align_depth.enable:=true
@@ -51,9 +51,9 @@ ros2 run server_client client
 ```
 
 ### What it does?
-After doing the command ```ros2 run server_client server```, the server would be initiated and waiting for request from the server.
+After doing the command ```ros2 run server_client server```, the server would be initiated and waiting for request from the client.
 
-After doing the command ```ros2 run server_client server```, the client is requesting the server to do two subprocess: (1) capture rgb and depth images from left and right cameras, and (2) run the grounding dino and send the (x,y,z) location information back to the client. 
+After doing the command ```ros2 run server_client client```, the client is requesting the server to do two subprocess: (1) capture rgb and depth images from left and right cameras, and (2) run the grounding dino and send the (x,y,z) location information back to the client. 
 
 You can see the information sent back in the terminal after the server has finished with all the process.
 
