@@ -1,0 +1,10 @@
+/homes/obluman/Robotics_Lab/build/custom_controller/CMakeFiles/uninstall.dir
+/homes/obluman/Robotics_Lab/build/custom_controller/CMakeFiles/custom_controller_uninstall.dir
+/homes/obluman/Robotics_Lab/build/custom_controller/CMakeFiles/custom_controller.dir
+/homes/obluman/Robotics_Lab/build/custom_controller/CMakeFiles/test.dir
+/homes/obluman/Robotics_Lab/build/custom_controller/CMakeFiles/edit_cache.dir
+/homes/obluman/Robotics_Lab/build/custom_controller/CMakeFiles/rebuild_cache.dir
+/homes/obluman/Robotics_Lab/build/custom_controller/CMakeFiles/list_install_components.dir
+/homes/obluman/Robotics_Lab/build/custom_controller/CMakeFiles/install.dir
+/homes/obluman/Robotics_Lab/build/custom_controller/CMakeFiles/install/local.dir
+/homes/obluman/Robotics_Lab/build/custom_controller/CMakeFiles/install/strip.dir

@@ -1,0 +1,17 @@
+LICENSE
+package.xml
+setup.cfg
+setup.py
+../../../build/rgbd_process/rgbd_process.egg-info/PKG-INFO
+../../../build/rgbd_process/rgbd_process.egg-info/SOURCES.txt
+../../../build/rgbd_process/rgbd_process.egg-info/dependency_links.txt
+../../../build/rgbd_process/rgbd_process.egg-info/entry_points.txt
+../../../build/rgbd_process/rgbd_process.egg-info/requires.txt
+../../../build/rgbd_process/rgbd_process.egg-info/top_level.txt
+../../../build/rgbd_process/rgbd_process.egg-info/zip-safe
+resource/rgbd_process
+rgbd_process/__init__.py
+rgbd_process/rgbd_recorder.py
+test/test_copyright.py
+test/test_flake8.py
+test/test_pep257.py

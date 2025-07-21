@@ -1,0 +1,3 @@
+[console_scripts]
+recorder = rgbd_process.rgbd_recorder:main
+

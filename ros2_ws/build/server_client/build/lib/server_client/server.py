@@ -19,8 +19,8 @@ class RGBDDetectionServer(Node):
         self.data_folder = '~/subscribed_data'  # where images are saved
         script_dir = os.path.dirname(os.path.realpath(__file__))
         #self.get_logger().info(f"current directory path is {script_dir}")
-        self.label_file = '/homes/tlei/Robotics_Lab/labels.txt'       # label file path
-        self.grounding_dino_script = '/homes/tlei/Robotics_Lab/dino_3d_location.py'  # path to your detection script
+        self.label_file = '/homes/obluman/Robotics_Lab/labels.txt'       # label file path
+        self.grounding_dino_script = '/homes/obluman/Robotics_Lab/dino_3d_location.py'  # path to your detection script
 
         self.get_logger().info("RGBD Detection Server is ready.")
 

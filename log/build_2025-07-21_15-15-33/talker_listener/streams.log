@@ -1,0 +1,41 @@
+[1.835s] Invoking command in '/homes/obluman/Robotics_Lab/ros2_ws/src/talker_listener': PYTHONPATH=/homes/obluman/Robotics_Lab/build/talker_listener/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/homes/obluman/Robotics_Lab/install/talker_listener/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../build/talker_listener build --build-base /homes/obluman/Robotics_Lab/build/talker_listener/build install --record /homes/obluman/Robotics_Lab/build/talker_listener/install.log --single-version-externally-managed install_data
+[2.170s] running egg_info
+[2.171s] creating ../../../build/talker_listener/talker_listener.egg-info
+[2.172s] writing ../../../build/talker_listener/talker_listener.egg-info/PKG-INFO
+[2.175s] writing dependency_links to ../../../build/talker_listener/talker_listener.egg-info/dependency_links.txt
+[2.176s] writing entry points to ../../../build/talker_listener/talker_listener.egg-info/entry_points.txt
+[2.177s] writing requirements to ../../../build/talker_listener/talker_listener.egg-info/requires.txt
+[2.178s] writing top-level names to ../../../build/talker_listener/talker_listener.egg-info/top_level.txt
+[2.179s] writing manifest file '../../../build/talker_listener/talker_listener.egg-info/SOURCES.txt'
+[2.183s] reading manifest file '../../../build/talker_listener/talker_listener.egg-info/SOURCES.txt'
+[2.185s] writing manifest file '../../../build/talker_listener/talker_listener.egg-info/SOURCES.txt'
+[2.186s] running build
+[2.186s] running build_py
+[2.187s] creating /homes/obluman/Robotics_Lab/build/talker_listener/build
+[2.187s] creating /homes/obluman/Robotics_Lab/build/talker_listener/build/lib
+[2.188s] creating /homes/obluman/Robotics_Lab/build/talker_listener/build/lib/talker_listener
+[2.189s] copying talker_listener/__init__.py -> /homes/obluman/Robotics_Lab/build/talker_listener/build/lib/talker_listener
+[2.191s] copying talker_listener/listener_node.py -> /homes/obluman/Robotics_Lab/build/talker_listener/build/lib/talker_listener
+[2.192s] copying talker_listener/talker_node.py -> /homes/obluman/Robotics_Lab/build/talker_listener/build/lib/talker_listener
+[2.194s] running install
+[2.195s] running install_lib
+[2.197s] creating /homes/obluman/Robotics_Lab/install/talker_listener/lib/python3.10/site-packages/talker_listener
+[2.198s] copying /homes/obluman/Robotics_Lab/build/talker_listener/build/lib/talker_listener/__init__.py -> /homes/obluman/Robotics_Lab/install/talker_listener/lib/python3.10/site-packages/talker_listener
+[2.200s] copying /homes/obluman/Robotics_Lab/build/talker_listener/build/lib/talker_listener/listener_node.py -> /homes/obluman/Robotics_Lab/install/talker_listener/lib/python3.10/site-packages/talker_listener
+[2.202s] copying /homes/obluman/Robotics_Lab/build/talker_listener/build/lib/talker_listener/talker_node.py -> /homes/obluman/Robotics_Lab/install/talker_listener/lib/python3.10/site-packages/talker_listener
+[2.205s] byte-compiling /homes/obluman/Robotics_Lab/install/talker_listener/lib/python3.10/site-packages/talker_listener/__init__.py to __init__.cpython-310.pyc
+[2.207s] byte-compiling /homes/obluman/Robotics_Lab/install/talker_listener/lib/python3.10/site-packages/talker_listener/listener_node.py to listener_node.cpython-310.pyc
+[2.210s] byte-compiling /homes/obluman/Robotics_Lab/install/talker_listener/lib/python3.10/site-packages/talker_listener/talker_node.py to talker_node.cpython-310.pyc
+[2.212s] running install_data
+[2.213s] creating /homes/obluman/Robotics_Lab/install/talker_listener/share/ament_index
+[2.213s] creating /homes/obluman/Robotics_Lab/install/talker_listener/share/ament_index/resource_index
+[2.214s] creating /homes/obluman/Robotics_Lab/install/talker_listener/share/ament_index/resource_index/packages
+[2.215s] copying resource/talker_listener -> /homes/obluman/Robotics_Lab/install/talker_listener/share/ament_index/resource_index/packages
+[2.216s] copying package.xml -> /homes/obluman/Robotics_Lab/install/talker_listener/share/talker_listener
+[2.218s] running install_egg_info
+[2.220s] Copying ../../../build/talker_listener/talker_listener.egg-info to /homes/obluman/Robotics_Lab/install/talker_listener/lib/python3.10/site-packages/talker_listener-0.0.0-py3.10.egg-info
+[2.240s] running install_scripts
+[2.261s] Installing listener script to /homes/obluman/Robotics_Lab/install/talker_listener/lib/talker_listener
+[2.262s] Installing talker script to /homes/obluman/Robotics_Lab/install/talker_listener/lib/talker_listener
+[2.264s] writing list of installed files to '/homes/obluman/Robotics_Lab/build/talker_listener/install.log'
+[2.288s] Invoked command in '/homes/obluman/Robotics_Lab/ros2_ws/src/talker_listener' returned '0': PYTHONPATH=/homes/obluman/Robotics_Lab/build/talker_listener/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/homes/obluman/Robotics_Lab/install/talker_listener/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../build/talker_listener build --build-base /homes/obluman/Robotics_Lab/build/talker_listener/build install --record /homes/obluman/Robotics_Lab/build/talker_listener/install.log --single-version-externally-managed install_data

@@ -1,0 +1,23 @@
+[1.761s] Invoking command in '/homes/obluman/Robotics_Lab/ros2_ws/src/server_client': PS1=\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ PYTHONPATH=/homes/obluman/Robotics_Lab/ros2_ws/build/server_client/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/homes/obluman/Robotics_Lab/ros2_ws/install/server_client/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/server_client build --build-base /homes/obluman/Robotics_Lab/ros2_ws/build/server_client/build install --record /homes/obluman/Robotics_Lab/ros2_ws/build/server_client/install.log --single-version-externally-managed install_data
+[2.035s] running egg_info
+[2.036s] writing ../../build/server_client/server_client.egg-info/PKG-INFO
+[2.038s] writing dependency_links to ../../build/server_client/server_client.egg-info/dependency_links.txt
+[2.039s] writing entry points to ../../build/server_client/server_client.egg-info/entry_points.txt
+[2.040s] writing requirements to ../../build/server_client/server_client.egg-info/requires.txt
+[2.040s] writing top-level names to ../../build/server_client/server_client.egg-info/top_level.txt
+[2.046s] reading manifest file '../../build/server_client/server_client.egg-info/SOURCES.txt'
+[2.048s] adding license file 'LICENSE'
+[2.049s] writing manifest file '../../build/server_client/server_client.egg-info/SOURCES.txt'
+[2.050s] running build
+[2.050s] running build_py
+[2.052s] running install
+[2.053s] running install_lib
+[2.057s] running install_data
+[2.059s] running install_egg_info
+[2.061s] removing '/homes/obluman/Robotics_Lab/ros2_ws/install/server_client/lib/python3.10/site-packages/server_client-0.0.0-py3.10.egg-info' (and everything under it)
+[2.064s] Copying ../../build/server_client/server_client.egg-info to /homes/obluman/Robotics_Lab/ros2_ws/install/server_client/lib/python3.10/site-packages/server_client-0.0.0-py3.10.egg-info
+[2.084s] running install_scripts
+[2.105s] Installing client script to /homes/obluman/Robotics_Lab/ros2_ws/install/server_client/lib/server_client
+[2.106s] Installing server script to /homes/obluman/Robotics_Lab/ros2_ws/install/server_client/lib/server_client
+[2.108s] writing list of installed files to '/homes/obluman/Robotics_Lab/ros2_ws/build/server_client/install.log'
+[2.204s] Invoked command in '/homes/obluman/Robotics_Lab/ros2_ws/src/server_client' returned '0': PS1=\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ PYTHONPATH=/homes/obluman/Robotics_Lab/ros2_ws/build/server_client/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/homes/obluman/Robotics_Lab/ros2_ws/install/server_client/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/server_client build --build-base /homes/obluman/Robotics_Lab/ros2_ws/build/server_client/build install --record /homes/obluman/Robotics_Lab/ros2_ws/build/server_client/install.log --single-version-externally-managed install_data

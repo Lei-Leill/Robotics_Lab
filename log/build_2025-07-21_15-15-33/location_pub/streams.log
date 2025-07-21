@@ -1,0 +1,38 @@
+[1.978s] Invoking command in '/homes/obluman/Robotics_Lab/ros2_ws/src/location_pub': PYTHONPATH=/homes/obluman/Robotics_Lab/build/location_pub/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/homes/obluman/Robotics_Lab/install/location_pub/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../build/location_pub build --build-base /homes/obluman/Robotics_Lab/build/location_pub/build install --record /homes/obluman/Robotics_Lab/build/location_pub/install.log --single-version-externally-managed install_data
+[2.278s] running egg_info
+[2.279s] creating ../../../build/location_pub/location_pub.egg-info
+[2.279s] writing ../../../build/location_pub/location_pub.egg-info/PKG-INFO
+[2.282s] writing dependency_links to ../../../build/location_pub/location_pub.egg-info/dependency_links.txt
+[2.283s] writing entry points to ../../../build/location_pub/location_pub.egg-info/entry_points.txt
+[2.284s] writing requirements to ../../../build/location_pub/location_pub.egg-info/requires.txt
+[2.285s] writing top-level names to ../../../build/location_pub/location_pub.egg-info/top_level.txt
+[2.286s] writing manifest file '../../../build/location_pub/location_pub.egg-info/SOURCES.txt'
+[2.291s] reading manifest file '../../../build/location_pub/location_pub.egg-info/SOURCES.txt'
+[2.292s] adding license file 'LICENSE'
+[2.293s] writing manifest file '../../../build/location_pub/location_pub.egg-info/SOURCES.txt'
+[2.294s] running build
+[2.294s] running build_py
+[2.295s] creating /homes/obluman/Robotics_Lab/build/location_pub/build
+[2.295s] creating /homes/obluman/Robotics_Lab/build/location_pub/build/lib
+[2.296s] creating /homes/obluman/Robotics_Lab/build/location_pub/build/lib/location_pub
+[2.296s] copying location_pub/__init__.py -> /homes/obluman/Robotics_Lab/build/location_pub/build/lib/location_pub
+[2.298s] copying location_pub/publisher.py -> /homes/obluman/Robotics_Lab/build/location_pub/build/lib/location_pub
+[2.300s] running install
+[2.300s] running install_lib
+[2.303s] creating /homes/obluman/Robotics_Lab/install/location_pub/lib/python3.10/site-packages/location_pub
+[2.303s] copying /homes/obluman/Robotics_Lab/build/location_pub/build/lib/location_pub/__init__.py -> /homes/obluman/Robotics_Lab/install/location_pub/lib/python3.10/site-packages/location_pub
+[2.305s] copying /homes/obluman/Robotics_Lab/build/location_pub/build/lib/location_pub/publisher.py -> /homes/obluman/Robotics_Lab/install/location_pub/lib/python3.10/site-packages/location_pub
+[2.308s] byte-compiling /homes/obluman/Robotics_Lab/install/location_pub/lib/python3.10/site-packages/location_pub/__init__.py to __init__.cpython-310.pyc
+[2.311s] byte-compiling /homes/obluman/Robotics_Lab/install/location_pub/lib/python3.10/site-packages/location_pub/publisher.py to publisher.cpython-310.pyc
+[2.314s] running install_data
+[2.314s] creating /homes/obluman/Robotics_Lab/install/location_pub/share/ament_index
+[2.314s] creating /homes/obluman/Robotics_Lab/install/location_pub/share/ament_index/resource_index
+[2.315s] creating /homes/obluman/Robotics_Lab/install/location_pub/share/ament_index/resource_index/packages
+[2.316s] copying resource/location_pub -> /homes/obluman/Robotics_Lab/install/location_pub/share/ament_index/resource_index/packages
+[2.317s] copying package.xml -> /homes/obluman/Robotics_Lab/install/location_pub/share/location_pub
+[2.318s] running install_egg_info
+[2.321s] Copying ../../../build/location_pub/location_pub.egg-info to /homes/obluman/Robotics_Lab/install/location_pub/lib/python3.10/site-packages/location_pub-0.0.0-py3.10.egg-info
+[2.340s] running install_scripts
+[2.363s] Installing publisher script to /homes/obluman/Robotics_Lab/install/location_pub/lib/location_pub
+[2.365s] writing list of installed files to '/homes/obluman/Robotics_Lab/build/location_pub/install.log'
+[2.417s] Invoked command in '/homes/obluman/Robotics_Lab/ros2_ws/src/location_pub' returned '0': PYTHONPATH=/homes/obluman/Robotics_Lab/build/location_pub/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/homes/obluman/Robotics_Lab/install/location_pub/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../build/location_pub build --build-base /homes/obluman/Robotics_Lab/build/location_pub/build install --record /homes/obluman/Robotics_Lab/build/location_pub/install.log --single-version-externally-managed install_data

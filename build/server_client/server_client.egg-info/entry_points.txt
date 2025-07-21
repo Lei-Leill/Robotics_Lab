@@ -1,0 +1,4 @@
+[console_scripts]
+client = server_client.client:main
+server = server_client.server:main
+

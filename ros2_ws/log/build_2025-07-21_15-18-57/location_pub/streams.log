@@ -1,0 +1,22 @@
+[1.854s] Invoking command in '/homes/obluman/Robotics_Lab/ros2_ws/src/location_pub': PYTHONPATH=/homes/obluman/Robotics_Lab/ros2_ws/build/location_pub/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/homes/obluman/Robotics_Lab/ros2_ws/install/location_pub/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/location_pub build --build-base /homes/obluman/Robotics_Lab/ros2_ws/build/location_pub/build install --record /homes/obluman/Robotics_Lab/ros2_ws/build/location_pub/install.log --single-version-externally-managed install_data
+[2.199s] running egg_info
+[2.200s] writing ../../build/location_pub/location_pub.egg-info/PKG-INFO
+[2.202s] writing dependency_links to ../../build/location_pub/location_pub.egg-info/dependency_links.txt
+[2.203s] writing entry points to ../../build/location_pub/location_pub.egg-info/entry_points.txt
+[2.205s] writing requirements to ../../build/location_pub/location_pub.egg-info/requires.txt
+[2.206s] writing top-level names to ../../build/location_pub/location_pub.egg-info/top_level.txt
+[2.210s] reading manifest file '../../build/location_pub/location_pub.egg-info/SOURCES.txt'
+[2.211s] adding license file 'LICENSE'
+[2.212s] writing manifest file '../../build/location_pub/location_pub.egg-info/SOURCES.txt'
+[2.213s] running build
+[2.213s] running build_py
+[2.215s] running install
+[2.215s] running install_lib
+[2.218s] running install_data
+[2.219s] running install_egg_info
+[2.221s] removing '/homes/obluman/Robotics_Lab/ros2_ws/install/location_pub/lib/python3.10/site-packages/location_pub-0.0.0-py3.10.egg-info' (and everything under it)
+[2.224s] Copying ../../build/location_pub/location_pub.egg-info to /homes/obluman/Robotics_Lab/ros2_ws/install/location_pub/lib/python3.10/site-packages/location_pub-0.0.0-py3.10.egg-info
+[2.241s] running install_scripts
+[2.265s] Installing publisher script to /homes/obluman/Robotics_Lab/ros2_ws/install/location_pub/lib/location_pub
+[2.267s] writing list of installed files to '/homes/obluman/Robotics_Lab/ros2_ws/build/location_pub/install.log'
+[2.292s] Invoked command in '/homes/obluman/Robotics_Lab/ros2_ws/src/location_pub' returned '0': PYTHONPATH=/homes/obluman/Robotics_Lab/ros2_ws/build/location_pub/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/homes/obluman/Robotics_Lab/ros2_ws/install/location_pub/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/location_pub build --build-base /homes/obluman/Robotics_Lab/ros2_ws/build/location_pub/build install --record /homes/obluman/Robotics_Lab/ros2_ws/build/location_pub/install.log --single-version-externally-managed install_data

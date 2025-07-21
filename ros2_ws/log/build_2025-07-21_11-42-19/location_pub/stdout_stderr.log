@@ -1,0 +1,28 @@
+running egg_info
+writing ../../build/location_pub/location_pub.egg-info/PKG-INFO
+writing dependency_links to ../../build/location_pub/location_pub.egg-info/dependency_links.txt
+writing entry points to ../../build/location_pub/location_pub.egg-info/entry_points.txt
+writing requirements to ../../build/location_pub/location_pub.egg-info/requires.txt
+writing top-level names to ../../build/location_pub/location_pub.egg-info/top_level.txt
+reading manifest file '../../build/location_pub/location_pub.egg-info/SOURCES.txt'
+adding license file 'LICENSE'
+writing manifest file '../../build/location_pub/location_pub.egg-info/SOURCES.txt'
+running build
+running build_py
+copying location_pub/__init__.py -> /homes/obluman/Robotics_Lab/ros2_ws/build/location_pub/build/lib/location_pub
+copying location_pub/publisher.py -> /homes/obluman/Robotics_Lab/ros2_ws/build/location_pub/build/lib/location_pub
+running install
+running install_lib
+copying /homes/obluman/Robotics_Lab/ros2_ws/build/location_pub/build/lib/location_pub/__init__.py -> /homes/obluman/Robotics_Lab/ros2_ws/install/location_pub/lib/python3.10/site-packages/location_pub
+copying /homes/obluman/Robotics_Lab/ros2_ws/build/location_pub/build/lib/location_pub/publisher.py -> /homes/obluman/Robotics_Lab/ros2_ws/install/location_pub/lib/python3.10/site-packages/location_pub
+byte-compiling /homes/obluman/Robotics_Lab/ros2_ws/install/location_pub/lib/python3.10/site-packages/location_pub/__init__.py to __init__.cpython-310.pyc
+byte-compiling /homes/obluman/Robotics_Lab/ros2_ws/install/location_pub/lib/python3.10/site-packages/location_pub/publisher.py to publisher.cpython-310.pyc
+running install_data
+copying resource/location_pub -> /homes/obluman/Robotics_Lab/ros2_ws/install/location_pub/share/ament_index/resource_index/packages
+copying package.xml -> /homes/obluman/Robotics_Lab/ros2_ws/install/location_pub/share/location_pub
+running install_egg_info
+removing '/homes/obluman/Robotics_Lab/ros2_ws/install/location_pub/lib/python3.10/site-packages/location_pub-0.0.0-py3.10.egg-info' (and everything under it)
+Copying ../../build/location_pub/location_pub.egg-info to /homes/obluman/Robotics_Lab/ros2_ws/install/location_pub/lib/python3.10/site-packages/location_pub-0.0.0-py3.10.egg-info
+running install_scripts
+Installing publisher script to /homes/obluman/Robotics_Lab/ros2_ws/install/location_pub/lib/location_pub
+writing list of installed files to '/homes/obluman/Robotics_Lab/ros2_ws/build/location_pub/install.log'

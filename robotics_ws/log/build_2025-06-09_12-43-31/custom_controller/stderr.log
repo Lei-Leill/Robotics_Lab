@@ -1,8 +1,0 @@
-[01m[K/homes/obluman/robotics_ws/src/custom_controller/src/custom_controller.cpp:[m[K In lambda function:
-[01m[K/homes/obluman/robotics_ws/src/custom_controller/src/custom_controller.cpp:58:90:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kresult[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
-   58 |       grasp_goal_options.result_callback = [this]([01;35m[Kconst GraspGoalHandle::WrappedResult & result[m[K) {
-      |                                                   [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~[m[K
-[01m[K/homes/obluman/robotics_ws/src/custom_controller/src/custom_controller.cpp:[m[K In lambda function:
-[01m[K/homes/obluman/robotics_ws/src/custom_controller/src/custom_controller.cpp:47:86:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kresult[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
-   47 |     move_goal_options.result_callback = [this]([01;35m[Kconst MoveGoalHandle::WrappedResult & result[m[K) {
-      |                                                [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~[m[K
