@@ -8,11 +8,11 @@ def main():
     coords = ast.literal_eval(last_line)
     x, y, z = coords
 
-    robot = Robot("000.000.0.0")
-    robot.relative_dynamics_factor = 0.02
+    robot = Robot("192.168.0.1")
+    robot.relative_dynamics_factor = 0.01
     current_orientation = robot.current_cartesian_state.pose.rotation().as_quat()
     pose = Affine([x, y, z], current_orientation)
-    motion = CartesianMotion(pose, ReferenceType.Absolute)
+    motion = CartesianMotion(pose)
     print("Moving Arm")
     robot.move(motion)
     print("Motion Complete")

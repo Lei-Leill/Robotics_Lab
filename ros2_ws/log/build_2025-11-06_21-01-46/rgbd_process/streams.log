@@ -1,0 +1,22 @@
+[1.706s] Invoking command in '/homes/obluman/Robotics_Lab/ros2_ws/src/rgbd_process': PYTHONPATH=/homes/obluman/Robotics_Lab/ros2_ws/build/rgbd_process/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/homes/obluman/Robotics_Lab/ros2_ws/install/rgbd_process/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/rgbd_process build --build-base /homes/obluman/Robotics_Lab/ros2_ws/build/rgbd_process/build install --record /homes/obluman/Robotics_Lab/ros2_ws/build/rgbd_process/install.log --single-version-externally-managed install_data
+[2.011s] running egg_info
+[2.012s] writing ../../build/rgbd_process/rgbd_process.egg-info/PKG-INFO
+[2.014s] writing dependency_links to ../../build/rgbd_process/rgbd_process.egg-info/dependency_links.txt
+[2.016s] writing entry points to ../../build/rgbd_process/rgbd_process.egg-info/entry_points.txt
+[2.017s] writing requirements to ../../build/rgbd_process/rgbd_process.egg-info/requires.txt
+[2.018s] writing top-level names to ../../build/rgbd_process/rgbd_process.egg-info/top_level.txt
+[2.023s] reading manifest file '../../build/rgbd_process/rgbd_process.egg-info/SOURCES.txt'
+[2.025s] adding license file 'LICENSE'
+[2.026s] writing manifest file '../../build/rgbd_process/rgbd_process.egg-info/SOURCES.txt'
+[2.027s] running build
+[2.027s] running build_py
+[2.029s] running install
+[2.029s] running install_lib
+[2.033s] running install_data
+[2.034s] running install_egg_info
+[2.036s] removing '/homes/obluman/Robotics_Lab/ros2_ws/install/rgbd_process/lib/python3.10/site-packages/rgbd_process-0.0.0-py3.10.egg-info' (and everything under it)
+[2.038s] Copying ../../build/rgbd_process/rgbd_process.egg-info to /homes/obluman/Robotics_Lab/ros2_ws/install/rgbd_process/lib/python3.10/site-packages/rgbd_process-0.0.0-py3.10.egg-info
+[2.057s] running install_scripts
+[2.082s] Installing recorder script to /homes/obluman/Robotics_Lab/ros2_ws/install/rgbd_process/lib/rgbd_process
+[2.085s] writing list of installed files to '/homes/obluman/Robotics_Lab/ros2_ws/build/rgbd_process/install.log'
+[2.114s] Invoked command in '/homes/obluman/Robotics_Lab/ros2_ws/src/rgbd_process' returned '0': PYTHONPATH=/homes/obluman/Robotics_Lab/ros2_ws/build/rgbd_process/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/homes/obluman/Robotics_Lab/ros2_ws/install/rgbd_process/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/rgbd_process build --build-base /homes/obluman/Robotics_Lab/ros2_ws/build/rgbd_process/build install --record /homes/obluman/Robotics_Lab/ros2_ws/build/rgbd_process/install.log --single-version-externally-managed install_data
